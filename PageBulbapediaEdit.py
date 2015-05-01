@@ -27,6 +27,9 @@ class PageBulbapediaEdit(Page):
             self.mCode = Commons.downloadPage(link)
             try:
                 os.mkdir("cache/")
+            except:
+                pass
+            try:
                 os.mkdir("cache/bulbapedia_edit/")
             except:
                 pass
