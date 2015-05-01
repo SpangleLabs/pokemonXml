@@ -46,7 +46,7 @@ class PageBulbapedia(Page):
         animeDexSearch = re.search(animeDexRegex,self.mCode)
         if(animeDexSearch is None):
             print("no anime dex section")
-            continue
+            return
         animeDexCode = animeDexSearch.group(1)
         outputList = []
         for animeDexEntrySearch in re.finditer(animeDexEntryRegex,animeDexCode):
