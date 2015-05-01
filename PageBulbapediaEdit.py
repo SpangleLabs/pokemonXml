@@ -38,4 +38,10 @@ class PageBulbapediaEdit(Page):
         pageLink = "http://bulbapedia.bulbagarden.net"+linkMatch.group(1)
         editLink = pageLink.replace("/wiki/","/w/index.php?title=")+"&action=edit"
         return editLink
-        
+    
+    def getTemplateValue(self,templateValue):
+        templateRegex = re.compile(b"^[\s]"+bytes(templateValue)+b"=([^\]*)|",re.MULTILINE)
+        templateSearch = templateRegex.search(self.mCode)
+        if(templateSearch is None):
+            return None
+        return templateSearch.group(1).strip()
