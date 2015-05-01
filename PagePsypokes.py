@@ -1,5 +1,6 @@
 from Commons import Commons
 from Page import Page
+import os
 
 class PagePsypokes(Page):
     '''
@@ -23,6 +24,11 @@ class PagePsypokes(Page):
             self.mCode = cacheFile.read()
         except:
             self.mCode = Commons.downloadPage(link)
+            try:
+                os.mkdir("cache/")
+                os.mkdir("cache/psypokes/")
+            except:
+                pass
             open("cache/psypokes/"+format(dexNum,'03')+".html","wb").write(self.mCode)
 
     @staticmethod

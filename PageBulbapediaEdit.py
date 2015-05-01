@@ -1,6 +1,7 @@
 from Commons import Commons
 import re
 from Page import Page
+import os
 
 class PageBulbapediaEdit(Page):
     '''
@@ -24,6 +25,11 @@ class PageBulbapediaEdit(Page):
             self.mCode = cacheFile.read()
         except:
             self.mCode = Commons.downloadPage(link)
+            try:
+                os.mkdir("cache/")
+                os.mkdir("cache/bulbapedia_edit/")
+            except:
+                pass
             open("cache/bulbapedia_edit/"+format(dexNum,'03')+".html","wb").write(self.mCode)
 
     @staticmethod

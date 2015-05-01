@@ -1,7 +1,7 @@
 from Commons import Commons
 from Page import Page
 from PageBulbapediaEdit import PageBulbapediaEdit
-
+import os
 
 class PageVeekun(Page):
     '''
@@ -25,6 +25,11 @@ class PageVeekun(Page):
             self.mCode = cacheFile.read()
         except:
             self.mCode = Commons.downloadPage(link)
+            try:
+                os.mkdir("cache/")
+                os.mkdir("cache/veekun/")
+            except:
+                pass
             open("cache/veekun/"+format(dexNum,'03')+".html","wb").write(self.mCode)
 
     @staticmethod

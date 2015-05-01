@@ -1,5 +1,6 @@
 from Commons import Commons
 from Page import Page
+import os
 
 class PagePokemonDb(Page):
     '''
@@ -23,6 +24,11 @@ class PagePokemonDb(Page):
             self.mCode = cacheFile.read()
         except:
             self.mCode = Commons.downloadPage(link)
+            try:
+                os.mkdir("cache/")
+                os.mkdir("cache/pokemondb/")
+            except:
+                pass
             open("cache/pokemondb/"+format(dexNum,'03')+".html","wb").write(self.mCode)
 
     @staticmethod
