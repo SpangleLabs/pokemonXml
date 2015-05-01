@@ -9,8 +9,8 @@ class Commons:
     @staticmethod
     def downloadPage(url):
         #time.sleep(3)
-        pagerequest = urllib.request.Request(url)
-        pagerequest.add_header('User-Agent','Mozilla/5.0 (X11; Linux i686; rv:23.0) Gecko/20100101 Firefox/23.0')
-        pageopener = urllib.request.build_opener()
-        code = pageopener.open(pagerequest).read()
+        pageRequest = urllib.request.Request(url)
+        pageRequest.add_header('User-Agent','Mozilla/5.0 (X11; Linux i686; rv:23.0) Gecko/20100101 Firefox/23.0')
+        pageOpener = urllib.request.build_opener()
+        code = pageOpener.open(pageRequest).read()
         return code
