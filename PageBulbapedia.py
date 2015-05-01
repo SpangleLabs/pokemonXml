@@ -31,7 +31,7 @@ class PageBulbapedia(Page):
         'Finds the bulbapedia link for this dex number'
         listPage = "http://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
         listCode = Commons.downloadPage(listPage)
-        linkRegex = re.compile(format(dexNum,'03')+"[\s]</td>[\s]<td>[\s]<a href=\"([^\"]*)")
+        linkRegex = re.compile(bytes(format(dexNum,'03'))+b"[\s]</td>[\s]<td>[\s]<a href=\"([^\"]*)")
         linkMatch = linkRegex.search(listCode)
         if(linkMatch is None):
             raise Exception("cannot find link")
