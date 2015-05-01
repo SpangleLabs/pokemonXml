@@ -27,7 +27,7 @@ class PageBulbapediaEdit(Page):
     def findLink(dexNum):
         'Finds the bulbapedia edit link for this dex number'
         listPage = "http://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
-        listCode = Commons.downloadPage(listPage)
+        listCode = Commons.loadPage("cache/bulbapedia_list_page.html",listPage)
         linkRegex = re.compile(format(dexNum,'03').encode()+b"[\s]</td>[\s]<td>[\s]<a href=\"([^\"]*)")
         linkMatch = linkRegex.search(listCode)
         if(linkMatch is None):
