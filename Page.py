@@ -18,12 +18,8 @@ class Page:
 #        if(link is None):
 #            link = self.findLink(dexNum)
 #        self.mLink = link
-#        try:
-#            cacheFile = open("cache/bulbapedia/"+format(dexNum,'03')+".html","rb")
-#            self.mCode = cacheFile.read()
-#        except:
-#            self.mCode = Commons.downloadPage(link)
-#            open("cache/bulbapedia/"+format(dexNum,'03')+".html","wb").write(self.mCode)
+#        cacheFileName = "cache/bulbapedia/"+format(dexNum,'03')+".html"
+#        self.mCode = Commons.loadPage(cacheFileName,link)
 
     @staticmethod
     def findLink(dexNum):

@@ -20,20 +20,8 @@ class PageVeekun(Page):
         if(link is None):
             link = self.findLink(dexNum)
         self.mLink = link
-        try:
-            cacheFile = open("cache/veekun/"+format(dexNum,'03')+".html","rb")
-            self.mCode = cacheFile.read()
-        except:
-            self.mCode = Commons.downloadPage(link)
-            try:
-                os.mkdir("cache/")
-            except:
-                pass
-            try:
-                os.mkdir("cache/veekun/")
-            except:
-                pass
-            open("cache/veekun/"+format(dexNum,'03')+".html","wb").write(self.mCode)
+        cacheFileName = "cache/veekun/"+format(dexNum,'03')+".html"
+        self.mCode = Commons.loadPage(cacheFileName,link)
 
     @staticmethod
     def findLink(dexNum):
