@@ -1,10 +1,11 @@
 import urllib.request
-
+import re
 
 class Commons:
     '''
     Commons class, contains a number of useful static methods
     '''
+    tagRegex = re.compile('<[^>]*>')
 
     @staticmethod
     def downloadPage(url):
