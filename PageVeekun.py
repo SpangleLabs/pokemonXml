@@ -28,6 +28,8 @@ class PageVeekun(Page):
         'Finds the page link for this dex number'
         if(dexNum==413):
             return "http://veekun.com/dex/pokemon/wormadam"
+        if(dexNum==555):
+            return "http://veekun.com/dex/pokemon/darmanitan"
         bulbaEditObject = PageBulbapediaEdit(dexNum)
         pokemonName = bulbaEditObject.getTemplateValue("pokefordex")
         linkVeekun = "http://veekun.com/dex/pokemon/"+pokemonName
