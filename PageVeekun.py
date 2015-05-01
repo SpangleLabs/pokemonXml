@@ -39,4 +39,5 @@ class PageVeekun(Page):
         linkVeekun = linkVeekun.replace("nidoran(m)","nidoran%E2%99%82")
         linkVeekun = linkVeekun.replace("mr_mime","mr.%20mime")
         linkVeekun = linkVeekun.replace("mime_jr","mime%20jr.")
+        linkVeekun = linkVeekun.replace("flabebe","flab%C3%A9b%C3%A9")
         return linkVeekun
