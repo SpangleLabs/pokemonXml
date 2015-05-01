@@ -3,7 +3,7 @@ from Page import Page
 from PageBulbapediaEdit import PageBulbapediaEdit
 
 
-class PageGeneric:
+class PageVeekun(Page):
     '''
     generic page object, template for others.
     '''
