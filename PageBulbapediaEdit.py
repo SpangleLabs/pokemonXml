@@ -40,7 +40,7 @@ class PageBulbapediaEdit(Page):
         return editLink
     
     def getTemplateValue(self,templateValue):
-        templateRegex = re.compile(b"^[\s]"+templateValue.encode()+b"=([^\]*)\|",re.MULTILINE)
+        templateRegex = re.compile(b"^[\s]"+templateValue.encode()+b"=([^|]*)\|",re.MULTILINE)
         templateSearch = templateRegex.search(self.mCode)
         if(templateSearch is None):
             return None
