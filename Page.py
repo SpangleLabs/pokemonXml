@@ -1,6 +1,6 @@
 
 
-class PageGeneric:
+class Page:
     '''
     generic page object, template for others.
     '''
