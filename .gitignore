@@ -2,3 +2,4 @@ cache/
 .project
 .pydevproject
 __pycache__/
+.settings/
