@@ -1,7 +1,8 @@
 from Commons import Commons
 import re
+from PageGeneric import PageGeneric
 
-class PageBulbapedia(object):
+class PageBulbapedia(PageGeneric):
     '''
     bulbapedia page object. For retrieving information from a bulbapedia page
     '''
