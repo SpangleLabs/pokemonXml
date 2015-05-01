@@ -1,0 +1,11 @@
+Notes on smogon api
+
+http://smogon.com/dex/api
+
+18:09:57 <zephyr> http://www.smogon.com/forums/threads/retrieving-post-ajax-html-from-strategydex.3531575/
+18:12:44 <zephyr> http://www.smogon.com/forums/threads/smogon-programming-megathread.24268/
+18:20:23 <zephyr> http://www.smogon.com/forums/threads/wip-using-the-smogon-framework.57139/
+
+http://www.rubydoc.info/gems/smogon/0.5.2/Smogon/Pokemon
+
+http://www.smogon.com/dex/api/query?q={%22pokemon%22%3A{%22gen%22%3A%22xy%22%2C%22alias%22%3A%22abomasnow%22}%2C%22%24%22%3A[%22name%22%2C%22alias%22%2C%22gen%22%2C{%22genfamily%22%3A[%22alias%22%2C%22gen%22]}%2C{%22alts%22%3A[%22alias%22%2C%22suffix%22%2C%22height%22%2C%22weight%22%2C%22gkpower%22%2C{%22types%22%3A[%22alias%22%2C%22name%22%2C%22gen%22]}%2C{%22%24groupby%22%3A%22modifier%22%2C%22effectives%22%3A[%22modifier%22%2C{%22type%22%3A[%22alias%22%2C%22name%22%2C%22gen%22]}]}%2C{%22abilities%22%3A[%22alias%22%2C%22name%22%2C%22gen%22%2C%22description%22]}%2C{%22tags%22%3A[%22name%22%2C%22alias%22%2C%22shorthand%22%2C%22gen%22]}%2C%22hp%22%2C%22patk%22%2C%22pdef%22%2C%22spatk%22%2C%22spdef%22%2C%22spe%22]}%2C{%22family%22%3A[%22root%22%2C{%22members%22%3A[%22name%22%2C%22alias%22%2C%22gen%22]}%2C{%22evolutions%22%3A[%22preevo%22%2C%22evo%22]}]%2C%22%24tree%22%3A[%22root%22%2C[%22members%22%2C%22name%22]%2C[%22evolutions%22%2C%22preevo%22%2C%22evo%22]]}%2C{%22movesets%22%3A[%22name%22%2C{%22tags%22%3A[%22alias%22%2C%22shorthand%22%2C%22name%22%2C%22gen%22]}%2C{%22items%22%3A[%22alias%22%2C%22name%22%2C%22gen%22%2C%22description%22]}%2C{%22abilities%22%3A[%22alias%22%2C%22name%22%2C%22gen%22]}%2C{%22evconfigs%22%3A[%22hp%22%2C%22patk%22%2C%22pdef%22%2C%22spatk%22%2C%22spdef%22%2C%22spe%22]}%2C{%22natures%22%3A[%22hp%22%2C%22patk%22%2C%22pdef%22%2C%22spatk%22%2C%22spdef%22%2C%22spe%22]}%2C{%22%24groupby%22%3A%22slot%22%2C%22moveslots%22%3A[%22slot%22%2C{%22move%22%3A[%22name%22%2C%22alias%22%2C%22gen%22]}]}%2C%22description%22]}%2C{%22moves%22%3A[%22name%22%2C%22alias%22%2C%22gen%22%2C%22category%22%2C%22power%22%2C%22accuracy%22%2C%22pp%22%2C%22description%22%2C{%22type%22%3A[%22alias%22%2C%22name%22%2C%22gen%22]}]}]}&m=1425546735.0263903
