@@ -10,7 +10,7 @@ class PageBulbapedia(object):
     mCode = None    #Code of page
 
 
-    def __init__(self,dexNum,link):
+    def __init__(self,dexNum,link=None):
         '''
         Constructor
         '''
@@ -20,8 +20,9 @@ class PageBulbapedia(object):
         except:
             self.mCode = Commons.downloadPage(link)
             open("cache/bulbapedia/"+format(dexNum,'03')+".html","wb").write(self.mCode)
-    
+        
     def getAnimeDexEntries(self):
+        'Returns a list of dictionaries representing anime Pokedex entries.'
         animeDexRegex = re.compile('<h3><span[^>]*>[^<]*dex entries</span></h3>(.*?)<h3>',re.DOTALL|re.IGNORECASE)
         animeDexEntryRegex = re.compile('<td> *<a[^>]*>([A-Z]+[0-9]+)</a>[^<]*</td>[^<]*<td> *<strong class="selflink">[^<]*</strong>[^<]*</td>[^<]*<td>[^<]*</td>[^<]*<td>(.*?)</td>',re.DOTALL|re.IGNORECASE)
         tagRegex = Commons.tagRegex
