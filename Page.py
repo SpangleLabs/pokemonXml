@@ -25,3 +25,6 @@ class Page:
     def findLink(dexNum):
         'Finds the page link for this dex number'
         raise NotImplementedError
+    
+    def getDexNum(self):
+        return self.mDexNum
