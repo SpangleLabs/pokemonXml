@@ -20,6 +20,18 @@ class PageBulbapedia(object):
         except:
             self.mCode = Commons.downloadPage(link)
             open("cache/bulbapedia/"+format(dexNum,'03')+".html","wb").write(self.mCode)
+
+    @staticmethod
+    def findLink(dexNum):
+        'Finds the bulbapedia link for this dex number'
+        listPage = "http://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
+        listCode = Commons.downloadPage(listPage)
+        linkRegex = re.compile(format(dexNum,'03')+"[\s]</td>[\s]<td>[\s]<a href=\"([^\"]*)")
+        linkMatch = linkRegex.search(listCode)
+        if(linkMatch is None):
+            raise Exception("cannot find link")
+        linkLink = "http://bulbapedia.bulbagarden.net"+linkMatch.group(1)
+        return linkLink
         
     def getAnimeDexEntries(self):
         'Returns a list of dictionaries representing anime Pokedex entries.'
