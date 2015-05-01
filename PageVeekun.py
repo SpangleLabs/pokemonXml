@@ -29,5 +29,7 @@ class PageVeekun(Page):
         bulbaEditObject = PageBulbapediaEdit(dexNum)
         pokemonName = bulbaEditObject.getTemplateValue("pokefordex")
         linkVeekun = "http://veekun.com/dex/pokemon/"+pokemonName
-        linkVeekun = linkVeekun.replace("nidoran(f)","nidoran%E2%99%80").replace("nidoran(m)","nidoran%E2%99%82")
+        linkVeekun = linkVeekun.replace("nidoran(f)","nidoran%E2%99%80")
+        linkVeekun = linkVeekun.replace("nidoran(m)","nidoran%E2%99%82")
+        linkVeekun = linkVeekun.replace("mr_mime","mr.%20mime")
         return linkVeekun
